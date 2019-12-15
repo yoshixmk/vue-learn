@@ -4,6 +4,7 @@
     <ol>
       <li v-for="item in list" :key="item.id">{{ item }}</li>
     </ol>
+    <button v-on:click="handleClick">click me!!</button>
   </div>
 </template>
 
@@ -13,6 +14,11 @@ export default {
     return {
       show: true,
       list: ['itemA', 'itemB']
+    }
+  },
+  methods: {
+    handleClick: function(event) {
+      alert(event.target)
     }
   }
 }
