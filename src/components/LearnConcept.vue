@@ -5,6 +5,9 @@
       <li v-for="item in list" :key="item.id">{{ item }}</li>
     </ol>
     <button v-on:click="handleClick">click me!!</button>
+
+    <p>{{message}}</p>
+    <input v-model="message">
   </div>
 </template>
 
@@ -13,7 +16,8 @@ export default {
   data() {
     return {
       show: true,
-      list: ['itemA', 'itemB']
+      list: ['itemA', 'itemB'],
+      message: 'default value'
     }
   },
   methods: {
