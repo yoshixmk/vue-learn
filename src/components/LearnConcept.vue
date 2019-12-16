@@ -9,6 +9,10 @@
     <input type="text" :value="message"/>
     <p>{{ vModel }}.</p>
     <input v-model="vModel"/>
+    <svg xmllns="https:www.w3.org/2000/svg" version="1.1">
+      <circle cx=100 cy=75 v-bind:r="radius" fill="lightpink"/>
+    </svg>
+    <input type="range" min=0 max=100 v-model="radius">
   </div>
 </template>
 
@@ -20,7 +24,8 @@ export default {
       list: ['itemA', 'itemB'],
       message: "Please input",
       count: 0,
-      vModel: "v-model"
+      vModel: "v-model",
+      radius: 50
     }
   },
   methods: {
