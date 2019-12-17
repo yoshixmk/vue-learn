@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div v-if="show">Hello vue concept</div>
+    <div v-if="show">Hello vue if statement</div>
+    <div v-show="show">Hello vue show statement</div>
+    <button v-on:click="reverseShow">Show: {{ show }}</button>
     <ol>
       <li v-for="item in list" :key="item.id">{{ item }}</li>
     </ol>
@@ -32,6 +34,9 @@ export default {
     handleClick: function() {
       // alert(event.target)
       this.count += 1;
+    },
+    reverseShow: function() {
+      this.show = !this.show
     }
   }
 }
