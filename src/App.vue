@@ -1,20 +1,23 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <LearnConcept/>
+    <LearnAxios/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 import LearnConcept from './components/LearnConcept'
+import LearnAxios from './components/LearnAxios'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
-    LearnConcept
+    // HelloWorld,
+    LearnConcept,
+    LearnAxios
   }
 }
 </script>
@@ -27,5 +30,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#app img {
+  width: 50px;
+  height: 50px;
 }
 </style>

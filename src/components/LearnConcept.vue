@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       show: true,
-      list: ['itemA', 'itemB'],
+      list: ['itemA', 'itemB', 'itemC'],
       message: "Please input",
       count: 0,
       vModel: "v-model",
