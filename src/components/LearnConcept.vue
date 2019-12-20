@@ -9,12 +9,13 @@
     <p>{{ count }} clicked.</p>
     <button v-on:click="handleClick">click me!!</button>
     <input type="text" :value="message"/>
-    <p>{{ vModel }}.</p>
+    <p >{{ vModel }}.</p>
     <input v-model="vModel"/>
     <svg xmllns="https:www.w3.org/2000/svg" version="1.1">
       <circle cx=100 cy=75 v-bind:r="radius" fill="lightpink"/>
     </svg>
     <input type="range" min=0 max=100 v-model="radius">
+    <p ref="hello">hello</p>
   </div>
 </template>
 
@@ -38,6 +39,11 @@ export default {
     reverseShow: function() {
       this.show = !this.show
     }
+  },
+  mounted: function() {
+    // alert(this.$el); template div el
+    // alert(this.$refs.hello); hello p el
+    console.log(this.$refs.hello); // eslint-disable-line
   }
 }
 </script>
