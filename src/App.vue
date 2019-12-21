@@ -4,6 +4,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <LearnConcept/>
     <LearnAxios/>
+    <LearnTemplate/>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 //import HelloWorld from './components/HelloWorld.vue'
 import LearnConcept from './components/LearnConcept'
 import LearnAxios from './components/LearnAxios'
+import LearnTemplate from './components/LearnTemplate'
 
 export default {
   name: 'app',
   components: {
     // HelloWorld,
     LearnConcept,
-    LearnAxios
+    LearnAxios,
+    LearnTemplate
   }
 }
 </script>
