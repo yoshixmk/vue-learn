@@ -6,14 +6,19 @@
 
     <div @click="handler('div1')">div1
       <!-- stopでバブリングしない -->
-      <a href="#top" @click.stop="handler('div2')">div2</a>
+      <a href="#top" @click.stop="handler('a1')">a1</a>
     </div>
 
     <!-- captureはstopより先に実行されるので逆順でどちらも表示される -->
-    <div @click.capture="handler('div3')">div3
+    <div @click.capture="handler('div2')">div2
       <!-- stopでバブリングしない -->
-      <a href="#top" @click.stop="handler('div4')">div4</a>
+      <a href="#top" @click.stop="handler('a2')">a2</a>
     </div>
+
+  <!-- 自分の要素だけの場合のみに発火 -->
+  <div class="overlay" @click.self="handler">self div
+    <a href="#top" @click="handler('a3')">a3</a>
+  </div>
   </div>
 </template>
 
