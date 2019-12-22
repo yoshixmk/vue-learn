@@ -15,10 +15,15 @@
       <a href="#top" @click.stop="handler('a2')">a2</a>
     </div>
 
-  <!-- 自分の要素だけの場合のみに発火 -->
-  <div class="overlay" @click.self="handler">self div
-    <a href="#top" @click="handler('a3')">a3</a>
-  </div>
+    <!-- 自分の要素だけの場合のみに発火 -->
+    <div class="overlay" @click.self="handler">self div
+      <a href="#top" @click="handler('a3')">a3</a>
+    </div>
+
+    <!-- .native コンポーネントにイベントを適応するとき -->
+
+    <!-- メッセージ送信のように、Enterを押すとイベント発火。変換後の決定では発火しない -->
+    <input v-on:keydown.enter="handler('Enter')">
   </div>
 </template>
 
