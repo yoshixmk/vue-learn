@@ -24,6 +24,9 @@
 
     <!-- メッセージ送信のように、Enterを押すとイベント発火。変換後の決定では発火しない -->
     <input v-on:keydown.enter="handler('Enter')">
+
+    <!-- Ctrl + Enter. システム修飾子（.ctrl, .alt, .shiftなど）は押されている時だけに絞りこむ -->
+    <input @keydown.ctrl.enter="handler('Enter')">
   </div>
 </template>
 
