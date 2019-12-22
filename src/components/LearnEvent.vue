@@ -1,0 +1,24 @@
+<template>
+  <div>
+    <button v-on:click.right="handler">right click</button>
+    <!-- ブラウザ自身の右クリックのメニューを表示させない -->
+    <button v-on:click.right.prevent="handler">prevent right click</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+    }
+  },
+  methods: {
+    handler: function(comment) {
+      console.log(comment); // eslint-disable-line
+    }
+  }
+}
+</script>
+
+<style scoped>
+</style>

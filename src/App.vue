@@ -2,25 +2,28 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <LearnConcept/>
-    <LearnAxios/>
+    <!-- <LearnConcept/>
+    <LearnAxios/> -->
     <LearnTemplate/>
+    <LearnEvent/>
   </div>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-import LearnConcept from './components/LearnConcept'
-import LearnAxios from './components/LearnAxios'
+// import LearnConcept from './components/LearnConcept'
+// import LearnAxios from './components/LearnAxios'
 import LearnTemplate from './components/LearnTemplate'
+import LearnEvent from './components/LearnEvent'
 
 export default {
   name: 'app',
   components: {
     // HelloWorld,
-    LearnConcept,
-    LearnAxios,
-    LearnTemplate
+    // LearnConcept,
+    // LearnAxios,
+    LearnTemplate,
+    LearnEvent
   }
 }
 </script>
