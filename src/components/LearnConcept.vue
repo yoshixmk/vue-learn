@@ -7,7 +7,12 @@
       <li v-for="item in list" :key="item.id">{{ item }}</li>
     </ol>
     <p>{{ count }} clicked.</p>
-    <button v-on:click="handleClick">click me!!</button>
+
+    <!-- どれもv-on:clickで同じ意味  -->
+    <button v-on:click="handleClick">click me!!1</button>
+    <button @click="handleClick">click me!!2</button>
+    <button @click="count++">click me!!3</button>
+
     <input type="text" :value="message"/>
     <p >{{ vModel }}.</p>
     <input v-model="vModel"/>
