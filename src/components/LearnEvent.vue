@@ -8,6 +8,12 @@
       <!-- stopでバブリングしない -->
       <a href="#top" @click.stop="handler('div2')">div2</a>
     </div>
+
+    <!-- captureはstopより先に実行されるので逆順でどちらも表示される -->
+    <div @click.capture="handler('div3')">div3
+      <!-- stopでバブリングしない -->
+      <a href="#top" @click.stop="handler('div4')">div4</a>
+    </div>
   </div>
 </template>
 
