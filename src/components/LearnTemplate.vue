@@ -8,6 +8,8 @@
     <span v-text="message"></span>
     <span v-html="tag"></span>
     <div v-cloak>v-cloak {{message}}</div>
+    <textarea v-model="textAreaMessage"></textarea>
+    <pre>{{textAreaMessage}}</pre>
   </div>
 </template>
 
@@ -17,7 +19,8 @@ export default {
     return {
       url: 'localhost:8080',
       message: 'first message',
-      tag: 'Hello <strong>Vue.js!</strong>'
+      tag: 'Hello <strong>Vue.js!</strong>',
+      textAreaMessage: 'Hello textarea!!\nHi textarea'
     }
   }
 
