@@ -26,7 +26,7 @@ export default {
       message: 'first message',
       tag: 'Hello <strong>Vue.js!</strong>',
       textAreaMessage: 'Hello textarea!!\nHi textarea',
-      val: true
+      val: []
     }
   }
 
