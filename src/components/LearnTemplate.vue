@@ -10,6 +10,11 @@
     <div v-cloak>v-cloak {{message}}</div>
     <textarea v-model="textAreaMessage"></textarea>
     <pre>{{textAreaMessage}}</pre>
+
+    <label><input type="checkbox" v-model="val" value="A"></label>
+    <label><input type="checkbox" v-model="val" value="B"></label>
+    <p>{{val}}</p>
+    
   </div>
 </template>
 
@@ -20,7 +25,8 @@ export default {
       url: 'localhost:8080',
       message: 'first message',
       tag: 'Hello <strong>Vue.js!</strong>',
-      textAreaMessage: 'Hello textarea!!\nHi textarea'
+      textAreaMessage: 'Hello textarea!!\nHi textarea',
+      val: true
     }
   }
 
