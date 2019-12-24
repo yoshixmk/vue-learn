@@ -14,7 +14,12 @@
     <label><input type="checkbox" v-model="val" value="A"></label>
     <label><input type="checkbox" v-model="val" value="B"></label>
     <p>{{val}}</p>
-    
+
+    <!-- .trim:値の余分なスペースを削除, .number:数値に変換, .lazy:inputの代わりにchnageイベントハンドル（テキストならフォーカスが外れたり、エンターを押したとき） -->
+    <input type="range" v-model.number="number">
+    <input type="text" v-model.trim.number="number">
+    <input type="text" v-model.trim.number.lazy="number">
+    {{number}}
   </div>
 </template>
 
@@ -26,7 +31,8 @@ export default {
       message: 'first message',
       tag: 'Hello <strong>Vue.js!</strong>',
       textAreaMessage: 'Hello textarea!!\nHi textarea',
-      val: []
+      val: [],
+      number: 50
     }
   }
 
