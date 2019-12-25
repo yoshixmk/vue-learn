@@ -6,6 +6,7 @@
     <LearnAxios/> -->
     <LearnTemplate/>
     <LearnEvent/>
+    <LearnComputed/>
   </div>
 </template>
 
@@ -15,6 +16,7 @@
 // import LearnAxios from './components/LearnAxios'
 import LearnTemplate from './components/LearnTemplate'
 import LearnEvent from './components/LearnEvent'
+import LearnComputed from './components/LearnComputed'
 
 export default {
   name: 'app',
@@ -23,7 +25,8 @@ export default {
     // LearnConcept,
     // LearnAxios,
     LearnTemplate,
-    LearnEvent
+    LearnEvent,
+    LearnComputed
   }
 }
 </script>
