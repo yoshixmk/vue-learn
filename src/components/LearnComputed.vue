@@ -1,6 +1,8 @@
 <template>
   <div>
     <p>{{width}}のはんぶんは{{halfWidth}}</p>
+    <input v-model.number="width">
+    <input v-model.number="halfWidth">
   </div>  
 </template>
 
@@ -12,8 +14,9 @@ export default {
     }
   },
   computed: {
-    halfWidth: function() {
-      return this.width / 2
+    halfWidth: {
+      get: function() {return this.width / 2},
+      set: function(val) {this.width = val * 2}
     }
   }
 }
