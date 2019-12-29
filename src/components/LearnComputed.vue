@@ -17,6 +17,16 @@ export default {
       width: 400
     }
   },
+  watch: {
+    width: {
+      handler: function(newVal, oldVal) {
+        // 変化した時に行いたい処理
+        console.log(`${oldVal} -> ${newVal}: width is changed.`); // eslint-disable-line
+      },
+      deep: false,
+      immedia: true
+    }
+  },
   methods: {
     methodRand: function(){return Math.random()}
   },
