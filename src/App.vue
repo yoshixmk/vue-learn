@@ -4,9 +4,10 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <LearnConcept/>
     <LearnAxios/> -->
-    <LearnTemplate/>
+    <!-- <LearnTemplate/>
     <LearnEvent/>
-    <LearnComputed/>
+    <LearnComputed/> -->
+    <WatchGithub/>
   </div>
 </template>
 
@@ -17,6 +18,7 @@
 import LearnTemplate from './components/LearnTemplate'
 import LearnEvent from './components/LearnEvent'
 import LearnComputed from './components/LearnComputed'
+import WatchGithub from './components/WatchGithub'
 
 export default {
   name: 'app',
@@ -24,9 +26,10 @@ export default {
     // HelloWorld,
     // LearnConcept,
     // LearnAxios,
-    LearnTemplate,
-    LearnEvent,
-    LearnComputed
+    // LearnTemplate,
+    // LearnEvent,
+    // LearnComputed
+    WatchGithub
   }
 }
 </script>
