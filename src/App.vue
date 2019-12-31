@@ -8,6 +8,7 @@
     <LearnEvent/>
     <LearnComputed/> -->
     <WatchGithub/>
+    <ConvertText/>
   </div>
 </template>
 
@@ -15,10 +16,11 @@
 //import HelloWorld from './components/HelloWorld.vue'
 // import LearnConcept from './components/LearnConcept'
 // import LearnAxios from './components/LearnAxios'
-import LearnTemplate from './components/LearnTemplate'
-import LearnEvent from './components/LearnEvent'
-import LearnComputed from './components/LearnComputed'
+// import LearnTemplate from './components/LearnTemplate'
+// import LearnEvent from './components/LearnEvent'
+// import LearnComputed from './components/LearnComputed'
 import WatchGithub from './components/WatchGithub'
+import ConvertText from './components/ConvertText'
 
 export default {
   name: 'app',
@@ -29,7 +31,8 @@ export default {
     // LearnTemplate,
     // LearnEvent,
     // LearnComputed
-    WatchGithub
+    WatchGithub,
+    ConvertText
   }
 }
 </script>
