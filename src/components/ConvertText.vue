@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <p>
-        180 度 = {{ 180 | radian | round }} ラジアン
-    </p>
-    <input type="text" v-focus>
-  </div>
+    <div>
+        <p>180 度 = {{ 180 | radian | round }} ラジアン</p>
+        <input type="text" v-focus>
+        <button v-on:click="list.push(list.length+1)">追加</button>
+        <ul ref="list">
+           <li v-for="item in list" v-bind:key="item.key">{{ item }}</li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -26,6 +28,21 @@ export default {
         el.focus() // 要素にフォーカスを当てる
       }
       // insertedの他、bind, update, componentUpdated, unbindのフックがある
+    }
+  },
+  data: function() {
+    return {
+      list: []
+    }
+  },
+  watch: {
+    list: function () {
+      // 更新後のul要素の高さを取得できない
+      console.log('通常:', this.$refs.list.offsetHeight); // eslint-disable-line
+      // nextTickを使えば取得できる
+      this.$nextTick(function () {
+        console.log('nextTick:', this.$refs.list.offsetHeight); // eslint-disable-line
+      })
     }
   }
 }
