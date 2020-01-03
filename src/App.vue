@@ -9,6 +9,7 @@
     <LearnComputed/> -->
     <WatchGithub/>
     <ConvertText/>
+    <Parent/>
   </div>
 </template>
 
@@ -21,6 +22,7 @@
 // import LearnComputed from './components/LearnComputed'
 import WatchGithub from './components/WatchGithub'
 import ConvertText from './components/ConvertText'
+import Parent from './components/connect/Parent'
 
 export default {
   name: 'app',
@@ -32,7 +34,8 @@ export default {
     // LearnEvent,
     // LearnComputed
     WatchGithub,
-    ConvertText
+    ConvertText,
+    Parent
   }
 }
 </script>
