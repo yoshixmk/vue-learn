@@ -4,15 +4,26 @@
             v-bind:key="item.id"
             v-bind="item"
             v-on:attack="handleAttack"></Child>
+        <Child2>
+            <header slot="header">
+                Hello Vue.js!
+            </header>
+            Vue.jsはJavaScriptのフレームワークです。
+            <footer slot="footer">
+              footer Vue.js!
+            </footer>
+        </Child2>
     </ul>    
 </template>
 
 <script>
 import Child from './Child'
+import Child2 from './Child2'
 
 export default {
   components: {
-    Child
+    Child,
+    Child2
   },
   data: function() {
     return{
