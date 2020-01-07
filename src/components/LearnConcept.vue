@@ -13,13 +13,13 @@
     <button @click="handleClick">click me!!2</button>
     <button @click="count++">click me!!3</button>
 
-    <input type="text" :value="message"/>
-    <p >{{ vModel }}.</p>
-    <input v-model="vModel"/>
+    <input type="text" :value="message" />
+    <p>{{ vModel }}.</p>
+    <input v-model="vModel" />
     <svg xmllns="https:www.w3.org/2000/svg" version="1.1">
-      <circle cx=100 cy=75 v-bind:r="radius" fill="lightpink"/>
+      <circle cx="100" cy="75" v-bind:r="radius" fill="lightpink" />
     </svg>
-    <input type="range" min=0 max=100 v-model="radius">
+    <input type="range" min="0" max="100" v-model="radius" />
     <p ref="hello">hello</p>
   </div>
 </template>
@@ -29,12 +29,12 @@ export default {
   data() {
     return {
       show: true,
-      list: ['itemA', 'itemB', 'itemC'],
+      list: ["itemA", "itemB", "itemC"],
       message: "Please input",
       count: 0,
       vModel: "v-model",
       radius: 50
-    }
+    };
   },
   methods: {
     handleClick: function() {
@@ -42,7 +42,7 @@ export default {
       this.count += 1;
     },
     reverseShow: function() {
-      this.show = !this.show
+      this.show = !this.show;
     }
   },
   mounted: function() {
@@ -50,9 +50,7 @@ export default {
     // alert(this.$refs.hello); hello p el
     console.log(this.$refs.hello); // eslint-disable-line
   }
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

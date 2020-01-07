@@ -1,6 +1,7 @@
 <template>
-    <li>{{ name }} HP.{{ hp }}
-    <button v-on:click="doAttack">攻撃する</button></li>
+  <li>
+    {{ name }} HP.{{ hp }} <button v-on:click="doAttack">攻撃する</button>
+  </li>
 </template>
 
 <script>
@@ -12,11 +13,10 @@ export default {
   },
   methods: {
     // ボタンのクリックイベントのハンドラから$emitでattackを発火する
-    doAttack: function () {
+    doAttack: function() {
       // 引数として自分のIDを渡す
-      this.$emit('attack', this.id)
+      this.$emit("attack", this.id);
     }
-  }  
-}
+  }
+};
 </script>
-  

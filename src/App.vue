@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <LearnConcept/>
     <LearnAxios/> -->
     <!-- <LearnTemplate/>
     <LearnEvent/>
     <LearnComputed/> -->
-    <WatchGithub/>
-    <ConvertText/>
-    <Parent/>
+    <WatchGithub />
+    <ConvertText />
+    <Parent />
   </div>
 </template>
 
@@ -20,12 +20,12 @@
 // import LearnTemplate from './components/LearnTemplate'
 // import LearnEvent from './components/LearnEvent'
 // import LearnComputed from './components/LearnComputed'
-import WatchGithub from './components/WatchGithub'
-import ConvertText from './components/ConvertText'
-import Parent from './components/connect/Parent'
+import WatchGithub from "./components/WatchGithub";
+import ConvertText from "./components/ConvertText";
+import Parent from "./components/connect/Parent";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     // HelloWorld,
     // LearnConcept,
@@ -37,12 +37,12 @@ export default {
     ConvertText,
     Parent
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
