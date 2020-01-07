@@ -18,6 +18,13 @@
         <!-- :nameはv-bind:nameと同じ -->
         <Child3 :name.sync="name" :hp.sync="hp">
         </Child3>
+
+        <p>^= はXOR。1なら0, 0なら1に書き換え</p>
+        <button v-on:click="current^=1">コンポーネントを切り替え</button>
+        <div v-bind:is="component"
+            v-bind="list[0]"
+            v-on:attack="handleAttack"
+            ></div>
     </ul>    
 </template>
 
@@ -40,7 +47,9 @@ export default {
         { id: 3, name: 'ドラゴン', hp: 500 }
       ],
       name: 'スライム',
-      hp: 100
+      hp: 100,
+      // 描画するコンポーネントを選択するためのindex
+      current: 0
     }
   },
   methods: {
@@ -50,6 +59,11 @@ export default {
       var item = this.list.find(el =>  el.id === id)
       // HPが0より多ければ10減らす
       if (item !== undefined && item.hp > 0) item.hp -= 10
+    }
+  },
+  computed: {
+    component() {
+      return ['Child', 'Child2'][this.current]
     }
   }
 }
