@@ -23,6 +23,7 @@
 import WatchGithub from "./components/WatchGithub";
 import ConvertText from "./components/ConvertText";
 import Parent from "./components/connect/Parent";
+import LearnStore from "./components/LearnStore";
 
 export default {
   name: "app",
@@ -36,7 +37,8 @@ export default {
     WatchGithub,
     ConvertText,
     Parent
-  }
+  },
+  mixins: [LearnStore]
 };
 </script>
 
