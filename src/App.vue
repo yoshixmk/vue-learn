@@ -10,6 +10,7 @@
     <WatchGithub />
     <ConvertText />
     <Parent />
+    <LearnStore/>
   </div>
 </template>
 
@@ -36,9 +37,9 @@ export default {
     // LearnComputed
     WatchGithub,
     ConvertText,
-    Parent
-  },
-  mixins: [LearnStore]
+    Parent,
+    LearnStore
+  }
 };
 </script>
 
