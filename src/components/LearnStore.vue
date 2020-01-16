@@ -14,6 +14,10 @@ export default {
     console.log(this.$store.state.count) // eslint-disable-line
     this.$store.commit('increment')
     console.log(this.$store.state.count) // eslint-disable-line
+
+    console.log(this.$router) // eslint-disable-line
+    // hash, matched, meta, name, etc...
+    console.log(this.$router.history.current.fullPath) // eslint-disable-line
   },
   computed: {
     message() {
