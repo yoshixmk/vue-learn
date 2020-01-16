@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -61,4 +61,10 @@ export default {
   width: 50px;
   height: 50px;
 }
+
+/* <router-link exact> とタグにexactを含めるパターン */
+/* .router-link-active {background: #888888} */
+
+/* 直接exact(完全一致)の時だけスタイルを当てるパターン */
+.router-link-exact-active {background: #888888}
 </style>
