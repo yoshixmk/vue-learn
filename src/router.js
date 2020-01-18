@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home'
 import Product from '@/views/Product'
+import ProductList from '@/views/ProductList'
 
 Vue.use(VueRouter)
 
@@ -18,7 +19,11 @@ const router = new VueRouter({
       component: Home
     },
     {
-      path: '/product',
+      path: '/products',
+      component: ProductList
+    },
+    {
+      path: '/products/:id(\\d+)',
       component: Product
     }
   ]
