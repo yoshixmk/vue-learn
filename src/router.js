@@ -24,7 +24,8 @@ const router = new VueRouter({
     },
     {
       path: '/products/:id(\\d+)',
-      component: Product
+      component: Product,
+      props: true // Productへのprops
     }
   ]
 })
