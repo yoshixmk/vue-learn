@@ -2,7 +2,7 @@
   <div id="app">
     <nav>
       <router-link to="/"> Home </router-link>/
-      <router-link to="/product"> Product </router-link>
+      <router-link to="/products"> Product </router-link>
     </nav>
     <router-view />
     <img alt="Vue logo" src="./assets/logo.png" />
