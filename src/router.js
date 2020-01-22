@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home'
 import Product from '@/views/Product'
 import ProductList from '@/views/ProductList'
+// import ProductHome from '@/views/Product/Home'
+// import ProductReview from '@/views/ProductReview'
+// import ProductReviewDetail from '@/views/ProductReviewDetail'
 
 Vue.use(VueRouter)
 
@@ -26,6 +29,23 @@ const router = new VueRouter({
       path: '/products/:id(\\d+)',
       component: Product,
       props: true // Productへのprops
+      /*children: [
+        {
+          name: 'product-home',
+          path: '',
+          component: ProductHome
+        },
+        {
+          name: 'product-review',
+          path: 'review',
+          component: ProductReview
+        },
+        {
+          name: 'product-review-detail',
+          path: 'review/:rid',
+          component: ProductReviewDetail
+        }
+      ]*/
     }
   ]
 })
