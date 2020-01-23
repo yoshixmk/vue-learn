@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props: {id: Number},
+  props: {id: String},
   data() {
     return {
       item: null
