@@ -4,7 +4,9 @@
       <router-link to="/"> Home </router-link>/
       <router-link to="/products"> Product </router-link>
     </nav>
-    <router-view />
+    <transition>
+      <router-view />
+    </transition>
     <img alt="Vue logo" src="./assets/logo.png" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <LearnConcept/>
@@ -67,4 +69,13 @@ export default {
 
 /* 直接exact(完全一致)の時だけスタイルを当てるパターン */
 .router-link-exact-active {background: #888888}
+.view-enter-active, .view-leave-active {
+  transition: opacity 0.5s;
+}
+.view-leave-active {
+  position: absolute;
+}
+.view-enter, .view-leave-to {
+  opacity: 0;
+}
 </style>
