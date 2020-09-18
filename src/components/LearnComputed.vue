@@ -14,39 +14,39 @@
 export default {
   data() {
     return {
-      width: 400
+      width: 400,
     };
   },
   watch: {
     width: {
-      handler: function(newVal, oldVal) {
+      handler: function (newVal, oldVal) {
         // 変化した時に行いたい処理
         console.log(`${oldVal} -> ${newVal}: width is changed.`); // eslint-disable-line
       },
       deep: false,
-      immedia: true
-    }
+      immedia: true,
+    },
   },
   methods: {
-    methodRand: function() {
+    methodRand: function () {
       return Math.random();
-    }
+    },
   },
   // method: との違いとして、キャッシュ機能がある。
   // リアクティブなデータに使わなかった場合は、同じものが返る
   computed: {
     halfWidth: {
-      get: function() {
+      get: function () {
         return this.width / 2;
       },
-      set: function(val) {
+      set: function (val) {
         this.width = val * 2;
-      }
+      },
     },
-    computedRand: function() {
+    computedRand: function () {
       return Math.random();
-    }
-  }
+    },
+  },
 };
 </script>
 

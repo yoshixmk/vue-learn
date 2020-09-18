@@ -33,23 +33,23 @@ export default {
       message: "Please input",
       count: 0,
       vModel: "v-model",
-      radius: 50
+      radius: 50,
     };
   },
   methods: {
-    handleClick: function() {
+    handleClick: function () {
       // alert(event.target)
       this.count += 1;
     },
-    reverseShow: function() {
+    reverseShow: function () {
       this.show = !this.show;
-    }
+    },
   },
-  mounted: function() {
+  mounted: function () {
     // alert(this.$el); template div el
     // alert(this.$refs.hello); hello p el
     console.log(this.$refs.hello); // eslint-disable-line
-  }
+  },
 };
 </script>
 

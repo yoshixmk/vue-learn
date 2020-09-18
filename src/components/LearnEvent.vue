@@ -39,10 +39,10 @@ export default {
     return {};
   },
   methods: {
-    handler: function(comment) {
+    handler: function (comment) {
       console.log(comment); // eslint-disable-line
-    }
-  }
+    },
+  },
 };
 </script>
 

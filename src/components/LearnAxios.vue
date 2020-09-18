@@ -11,21 +11,21 @@ import axios from "axios";
 export default {
   data() {
     return {
-      list: []
+      list: [],
     };
   },
-  created: function() {
+  created: function () {
     axios
       .get("list.json")
       .then(
-        function(res) {
+        function (res) {
           this.list = res.data;
         }.bind(this)
       )
-      .catch(function(e) {
+      .catch(function (e) {
         alert(e);
       });
-  }
+  },
 };
 </script>
 

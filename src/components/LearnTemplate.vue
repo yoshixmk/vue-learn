@@ -11,8 +11,8 @@
     <textarea v-model="textAreaMessage"></textarea>
     <pre>{{ textAreaMessage }}</pre>
 
-    <label><input type="checkbox" v-model="val" value="A"/></label>
-    <label><input type="checkbox" v-model="val" value="B"/></label>
+    <label><input type="checkbox" v-model="val" value="A" /></label>
+    <label><input type="checkbox" v-model="val" value="B" /></label>
     <p>{{ val }}</p>
 
     <!-- .trim:値の余分なスペースを削除, .number:数値に変換, .lazy:inputの代わりにchnageイベントハンドル（テキストならフォーカスが外れたり、エンターを押したとき） -->
@@ -32,9 +32,9 @@ export default {
       tag: "Hello <strong>Vue.js!</strong>",
       textAreaMessage: "Hello textarea!!\nHi textarea",
       val: [],
-      number: 50
+      number: 50,
     };
-  }
+  },
 };
 </script>
 
